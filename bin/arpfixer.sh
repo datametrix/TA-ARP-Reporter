@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 tempfile=`mktemp`
 tempfile2=`mktemp`
 destination_file=/home/s_arpdump/FW_NAME_arp.csv
