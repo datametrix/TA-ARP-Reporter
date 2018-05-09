@@ -4,7 +4,7 @@ tempfile2=`mktemp`
 destination_file=/home/s_arpdump/FW_NAME_arp.csv
 excluded_macs=/home/s_arpdump/FW_NAME_localadd
 
-cat /home/s_arpdump/byfw01.gassco.no_arp.txt | sed s/" "/,/g | sed  $'s/\t//'  > $tempfile
+cat /home/s_arpdump/fw01.example.com_arp.txt | sed s/" "/,/g | sed  $'s/\t//'  > $tempfile
 tail -n +2 $tempfile | sed '1s/^/src_interface,src_ip,src_mac,age\n/' >$tempfile2
 if [ -f $excluded_macs ];
 then
